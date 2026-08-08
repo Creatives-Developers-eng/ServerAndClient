@@ -1,51 +1,33 @@
-# ServerAndClient
-# 🌐 Client-Server Learning Repository
+# 🌐 Client-Server Desktop Application (WinForms)
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Active%20Learning-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)
+![C#](https://img.shields.io/badge/Language-C%23-purple.svg)
+![NET](https://img.shields.io/badge/Framework-.NET%208.0--windows-blue.svg)
+![UI](https://img.shields.io/badge/UI-Windows%20Forms-brightgreen.svg)
+![IDE](https://img.shields.io/badge/IDE-Visual%20Studio-blueviolet.svg)
 
-مرحباً بكم في المستودع التعليمي المخصص لتطبيق مفاهيم **عميل-خادم (Client-Server Architecture)** وتطوير مهارات العمل الجماعي باستخدام **Git & GitHub Flow**.
-
----
-
-## 📌 أهداف المشروع (Project Objectives)
-
-يهدف هذا المشروع إلى نقل الفريق من الأساسيات النظرية إلى التطبيق العملي من خلال نقطتين رئيسيتين:
-
-1. **الجانب التقني (Technical Knowledge):**
-   - فهم آلية الاتصال عبر بروتوكولات الشبكة (TCP / UDP).
-   - بناء برمجيات المقابس (Socket Programming).
-   - التعامل مع البرمجة متعددة الخيوط (Multi-threading / Async) لإدارة كائنات خادم تستقبل عدة عملاء في وقت واحد.
-   - تشفير وتسلسل البيانات (Data Serialization & Protocols) المتبادلة بين العميل والخادم (JSON / Byte Streams).
-
-2. **جانب إدارة المشاريع (GitHub Workflow):**
-   - التدرب على إنشاء الفروع (Branching Strategy).
-   - كتابة رسائل حفظ معيارية (Conventional Commits).
-   - إنشاء ومراجعة طلبات السحب (Pull Requests & Code Reviews).
-   - حل تعارضات الكود (Merge Conflicts) بشكل احترافي.
+مرحباً بأعضاء الفريق! هذا المستودع مخصص لتطبيق مفاهيم **Client-Server Architecture** ببرمجة الواجهات الرسمية **Windows Forms**، مع تطبيق أفضل ممارسات إدارة المشاريع عبر **Git & GitHub Flow**.
 
 ---
 
-## 🏗️ هيكلية المستودع (Folder Structure)
+## 📐 هيكلية المشروع (Project Structure)
 
-تم تنظيم المستودع ليفصل بين كود الخادم، العميل، والوثائق التعليمية:
+تم تنظيم الكود داخل مجلد `src` ليحتوي على مشروعين مستقلين كـ Windows Forms:
 
 ```text
 client-and-server/
 │
 ├── 📁 src/
-│   ├── 📁 Server/            # كود مشروع الخادم (Server Project)
-│   │   ├── Program.cs
-│   │   └── Core/             # منطق إدارة الاتصالات والـ Sockets
+│   ├── 📁 Server/             # تطبيق الخادم (Windows Forms App)
+│   │   ├── ServerForm.cs      # واجهة التحكم بالخادم (UI)
+│   │   ├── ServerForm.Designer.cs
+│   │   └── Server.csproj
 │   │
-│   └── 📁 Client/            # كود مشروع العميل (Client Project)
-│       ├── Program.cs
-│       └── Services/         # خدمات إرسال واستقبال البيانات
+│   ├── 📁 Client/             # تطبيق العميل (Windows Forms App)
+│   │   ├── ClientForm.cs      # واجهة العميل وإرسال الرسائل (UI)
+│   │   ├── ClientForm.Designer.cs
+│   │   └── Client.csproj
+│   │
+│   └── 📄 ClientAndServer.sln # ملف الحل الرئيسي في Visual Studio
 │
-├── 📁 docs/                  # التوثيق والرسومات التوضيحية للمشروع
-│   └── architecture-diagram.png
-│
-├── .gitignore                # استبعاد ملفات البناء المؤقتة (Visual Studio)
-└── README.md                 # الوثيقة الرئيسية للمشروع
-
+├── 📄 .gitignore              # استبعاد ملفات البناء المؤقتة لـ Visual Studio
+└── 📄 README.md               # الدليل الشامل وقواعد العمل
